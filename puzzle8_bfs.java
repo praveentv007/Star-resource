@@ -1,0 +1,295 @@
+import java.util.*;
+
+public class puzzle8_bfs{
+
+public static String swap(char c[],int a,int b){
+    char temp=c[a];
+      c[a]=c[b];
+     c[b]=temp;
+  
+      return new String(c);
+}
+
+
+
+public static void main(String args[]){
+
+    Scanner in=new Scanner(System.in);
+   
+    String initial=in.next();
+   String goal="123456780";
+   HashSet<String> hs=new HashSet<String>();
+ArrayList<String> al=new ArrayList<String>(); 
+
+        al.add(initial);
+      hs.add(initial);
+   
+      while(al.size()!=0){
+     
+           String s=al.remove(0);
+        if(s.equals(goal)){
+        System.out.println(s);
+           System.out.println("YES");   
+         break;
+       }
+             
+     if(s.indexOf('0')==0){
+      
+                     
+     String s1=swap(s.toCharArray(),0,1);
+     String s2=swap(s.toCharArray(),0,3);
+      System.out.println(s1);
+         System.out.println(s2);
+     System.out.println("");
+           
+
+           if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+        
+ 
+      }
+       else if(s.indexOf('0')==2){
+      
+                     
+     String s1=swap(s.toCharArray(),2,1);
+     String s2=swap(s.toCharArray(),2,5);
+          System.out.println(s1);
+         System.out.println(s2);
+     System.out.println("");
+            
+
+
+          if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+        
+ 
+      }
+      else if(s.indexOf('0')==6){
+      
+                     
+     String s1=swap(s.toCharArray(),6,3);
+     String s2=swap(s.toCharArray(),6,7);
+        
+        System.out.println(s1);
+         System.out.println(s2);
+     System.out.println("");
+      
+ 
+
+         if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+        
+ 
+      }
+        else if(s.indexOf('0')==8){
+      
+                     
+    
+
+
+      String s1=swap(s.toCharArray(),8,5);
+     String s2=swap(s.toCharArray(),8,7);
+    System.out.println(s1);
+         System.out.println(s2);
+     System.out.println("");
+      
+ 
+
+
+       if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+        
+ 
+      }
+      else if(s.indexOf('0')==4){
+      
+                     
+     String s1=swap(s.toCharArray(),4,1);
+     String s2=swap(s.toCharArray(),4,3);
+      String s3=swap(s.toCharArray(),4,5);
+     String s4=swap(s.toCharArray(),4,7);
+           
+           System.out.println(s1);
+         System.out.println(s2);
+ System.out.println(s3);
+         System.out.println(s4);
+     System.out.println("");
+      
+
+     
+      
+
+   
+
+         if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+           if(!hs.contains(s3)){
+           hs.add(s3);
+            al.add(s3);  
+         }       
+        if(!hs.contains(s4)){
+           hs.add(s4);
+            al.add(s4);  
+         }       
+                
+ 
+      }
+          else if(s.indexOf('0')==1){
+      
+                     
+     String s1=swap(s.toCharArray(),1,0);
+     String s2=swap(s.toCharArray(),1,2);
+      String s3=swap(s.toCharArray(),1,4);
+
+               System.out.println(s1);
+         System.out.println(s2);
+ System.out.println(s3);
+         System.out.println("");
+     
+
+         if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+           if(!hs.contains(s3)){
+           hs.add(s3);
+            al.add(s3);  
+         }       
+                
+ 
+      }
+     else if(s.indexOf('0')==3){
+      
+                     
+     String s1=swap(s.toCharArray(),3,0);
+     String s2=swap(s.toCharArray(),3,6);
+      String s3=swap(s.toCharArray(),3,4);
+
+     System.out.println(s1);
+         System.out.println(s2);
+ System.out.println(s3);
+         System.out.println("");
+     
+
+         if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+           if(!hs.contains(s3)){
+           hs.add(s3);
+            al.add(s3);  
+         }       
+                
+ 
+      }
+        else if(s.indexOf('0')==5){
+      
+                     
+     String s1=swap(s.toCharArray(),5,2);
+     String s2=swap(s.toCharArray(),5,8);
+      String s3=swap(s.toCharArray(),5,4);
+
+     System.out.println(s1);
+         System.out.println(s2);
+ System.out.println(s3);
+         System.out.println("");
+     
+
+         if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+           if(!hs.contains(s3)){
+           hs.add(s3);
+            al.add(s3);  
+         }       
+                
+ 
+      }
+            else if(s.indexOf('0')==7){
+      
+                     
+     String s1=swap(s.toCharArray(),7,4);
+     String s2=swap(s.toCharArray(),7,6);
+      String s3=swap(s.toCharArray(),7,8);
+
+     System.out.println(s1);
+         System.out.println(s2);
+ System.out.println(s3);
+         System.out.println("");
+     
+
+         if(!hs.contains(s1)){
+           hs.add(s1);
+            al.add(s1);  
+         }       
+         if(!hs.contains(s2)){
+           hs.add(s2);
+            al.add(s2);  
+         }       
+           if(!hs.contains(s3)){
+           hs.add(s3);
+            al.add(s3);  
+         }       
+                
+ 
+      }
+   
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+}
+}
+}
